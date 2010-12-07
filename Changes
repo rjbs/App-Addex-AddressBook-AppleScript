@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.002     2010-12-07 09:08:02 America/New_York
           explicitly state perl 5.10 requirement
 
 0.001     2010-12-06 22:07:36 America/New_York
