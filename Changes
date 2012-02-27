@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.003     2012-02-27 13:19:20 America/New_York
           change how notes fields are processed
 
           add a "use middle" field; if set and false, the person's middle name
