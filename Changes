@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          port the default_email feature from the Apple address book plugin
 
 0.003     2012-02-27 13:19:20 America/New_York
           change how notes fields are processed
