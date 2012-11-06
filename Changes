@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.004     2012-11-06 14:16:20 America/New_York
           port the default_email feature from the Apple address book plugin
 
 0.003     2012-02-27 13:19:20 America/New_York
