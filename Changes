@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          for "company" cards, use the organization field rather than the name
+          fields
 
 0.004     2012-11-06 14:16:20 America/New_York
           port the default_email feature from the Apple address book plugin

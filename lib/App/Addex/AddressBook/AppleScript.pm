@@ -30,6 +30,8 @@ use File::Temp ();
 
 sub _produce_applescript {
   my @fields = (
+    'company', # true / false
+    'organization',
     'first name',
     'middle name',
     'last name',
@@ -161,10 +163,20 @@ sub _entrify {
 
   $mname = '' unless $fields{'use middle'} // 1;
 
-  my $name = $fname
-           . (length $mname  ? " $mname"  : '')
-           . (length $lname  ? " $lname"  : '')
-           . (length $suffix ? " $suffix" : '');
+  my $name;
+  if ($person->{company} eq 'true') {
+    $name = $person->{organization};
+  } else {
+    $name = $fname
+          . (length $mname  ? " $mname"  : '')
+          . (length $lname  ? " $lname"  : '')
+          . (length $suffix ? " $suffix" : '');
+  }
+
+  unless (length $name) {
+    warn "couldn't figure out a name for this entry\n";
+    return;
+  }
 
   my @emails;
   my @kv = @{ $person->{emails} };
