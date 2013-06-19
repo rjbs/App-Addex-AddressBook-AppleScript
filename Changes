@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          update bugtracker
 
 0.005     2013-04-18 21:10:49 America/New_York
           for "company" cards, use the organization field rather than the name
