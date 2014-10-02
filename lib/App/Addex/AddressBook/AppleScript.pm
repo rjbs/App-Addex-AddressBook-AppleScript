@@ -2,6 +2,7 @@ use 5.10.1;
 use strict;
 use warnings;
 package App::Addex::AddressBook::AppleScript;
+
 use base qw(App::Addex::AddressBook);
 # ABSTRACT: Mac::Glue-less Addex adapter for Apple Address Book and Addex
 
