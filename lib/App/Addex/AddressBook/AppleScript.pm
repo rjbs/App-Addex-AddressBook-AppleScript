@@ -1,9 +1,10 @@
-use 5.10.1;
+use 5.20.0;
 use strict;
 use warnings;
 package App::Addex::AddressBook::AppleScript;
 
-use base qw(App::Addex::AddressBook);
+use parent qw(App::Addex::AddressBook);
+use experimental 'postderef';
 # ABSTRACT: Mac::Glue-less Addex adapter for Apple Address Book and Addex
 
 =head1 SYNOPSIS
@@ -152,7 +153,12 @@ sub _entrify {
     my @lines = grep { length } split /\R/, $note;
     for my $line (@lines) {
       next if $line =~ /^--/; # comment
-      warn("bogus line in notes: $line\n"), next
+
+      my $tmpname
+        = join q{ }, grep $_,
+          $person->@{'first name', 'middle name', 'last name', 'suffix'};
+
+      warn("bogus line in notes on $tmpname: $line\n"), next
         unless $line =~ /\A([^:]+):\s*(.+?)\Z/;
       $fields{$1} = $2;
     }
