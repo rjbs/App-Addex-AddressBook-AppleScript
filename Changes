@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.008     2014-10-02 10:41:50-04:00 America/New_York
         - allow "--" as line leader for comments in notes section
 
 0.007     2013-11-19 23:16:54 America/New_York
