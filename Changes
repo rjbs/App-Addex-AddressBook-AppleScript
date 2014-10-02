@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        - allow "--" as line leader for comments in notes section
 
 0.007     2013-11-19 23:16:54 America/New_York
           fix repository link

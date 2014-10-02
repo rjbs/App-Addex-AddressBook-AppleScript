@@ -150,6 +150,7 @@ sub _entrify {
   if (my $note = $person->{note} // '') {
     my @lines = grep { length } split /\R/, $note;
     for my $line (@lines) {
+      next if $line =~ /^--/; # comment
       warn("bogus line in notes: $line\n"), next
         unless $line =~ /\A([^:]+):\s*(.+?)\Z/;
       $fields{$1} = $2;
